@@ -20,3 +20,4 @@ gen/
 # Eclipse project files  
 .classpath  
 .project  
+/LOG_PATH_IS_UNDEFINED/
