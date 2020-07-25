@@ -1,16 +1,15 @@
-spring:
+server:
+  port: 8080  
+spring: 
   application:
     name: grades
-server:
-  port: 8080 
-  datasource:
+  datasource: 
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
     url: jdbc:mysql://47.115.25.27:3306/gradesys?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: gradesys 
     password: c4PMyECTDWmN7fFA 
     # 使用druid数据源
-    type: com.alibaba.druid.pool.DruidDataSource 
     filters: stat
     maxActive: 20
     initialSize: 1
@@ -18,14 +17,15 @@ server:
     minIdle: 1
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 300000 
-    jpa:
+    jpa: 
       show-sql: true
       hibernate:
           ddl-auto: update    
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: com.dream.grades.entity     # 所有Entity别名类所在包
-logging: 
-  config: classpath:logback-spring.xml 
-  level: 
-    com.muses.taoshop: debug
+  type-aliases-package: com.dream.grades.entity     
+  configLocation: classpath:config/mybatis-config.xml 
+#logging: 
+#  config: classpath:logback-spring.xml 
+#  level: 
+#    com.muses.taoshop: debug

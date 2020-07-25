@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-@MapperScan("com.dream.grades.dao.mapper")
+@MapperScan("com.dream.grades.mapper")
 public class GradesApplication {
 	public static final Logger logger = LoggerFactory.getLogger(GradesApplication.class);
 	public static void main(String[] args) {
