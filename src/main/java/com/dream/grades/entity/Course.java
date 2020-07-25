@@ -108,5 +108,4 @@ public class Course implements Serializable{
 				+ ", school_name=" + school_name + "]";
 	}
 	
-	
 }
